@@ -5,30 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des students</title>
+    <link rel="stylesheet" href="templates/style.css">
 </head>
 
 <body>
+    <h1>Liste des students</h1>
     <main role="main" class="container">
-        <table class="table">
-            <thead style="background-color: #ddd; font-weight: bold;">
-                <tr>
-                    <td class="header">Id</td>
-                    <td class="header">Name</td>
-                    <td class="header">Age</td>
-                    <td class="header">Bio</td>
-                </tr>
-            </thead>
-            <tbody>
-                {% for student in students %}
-                <tr>
-                    <td>{{ student.id}}</td>
-                    <td>{{ student.name}}</td>
-                    <td>{{ student.age }}</td>
-                    <td>{{ student.bio }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <ul class="student-list">
+            {% for student in students %}
+            <li class="student-card">
+                <h2>{{ student.name }}</h2>
+                <p class="student-age">Age: {{ student.age }} ans</p>
+                <p class="student-bio">Bio: {{ student.bio }}</p>
+            </li>
+            {% endfor %}
+        </ul>
     </main>
 </body>
 

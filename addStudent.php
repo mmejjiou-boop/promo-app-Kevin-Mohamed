@@ -1,24 +1,21 @@
 <?php
-
 require_once "bootstrap.php";
-require_once "vendor/autoload.php";
 
-use Symphonie\Modele\Student;
+use monProjet\Modele\Student;
 
 // si le formulaire est envoyé
-if (isset($_POST['submit'])) {
+if (isset($_GET['ajouter'])) {
 
     $student = new Student();
-    $student->setName($_POST['name']);
-    $student->setAge($_POST['age']);
-    $student->setBio($_POST['bio']);
+    $student->setName($_GET['name']);
+    $student->setAge($_GET['age']);
+    $student->setBio($_GET['bio']);
 
     $entityManager->persist($student);
     $entityManager->flush();
 
     // retour vers la liste
     header("Location: mesStudents.php");
-    exit;
 }
 
 // Twig

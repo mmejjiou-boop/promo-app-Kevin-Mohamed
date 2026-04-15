@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Création d'un student</h1>
+    <fieldset>
+        <legend>Saisir un nouveau student </legend>
+        <form method="get" action="addStudent.php">
+            <div class="form">
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" name="name" value="{{student.name}}" class="form-control" id="name"
+                        placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="Age">Âge</label>
+                    <input type="number" name="age" value="{{student.age}}" class="form-control" id="age"
+                        placeholder="Âge">
+                </div>
+                <div class="form-group">
+                    <label for="Bio">Biographie</label>
+                    <textarea name="bio" class="form-control" id="bio"
+                        placeholder="Biographie">{{student.bio}}</textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success" name="ajouter" value="valide">Ajouter</button>
+        </form>
+</body>
+
+</html>
