@@ -1,0 +1,20 @@
+{
+  "name": "kevin/promo-app-kevin-mohamed",
+  "autoload": {
+    "psr-4": {
+      "monProjet\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Kevin Guibert",
+      "email": "kevin.gbt2805@gmail.com"
+    }
+  ],
+  "require": {
+    "twig/twig": "^3.24",
+    "doctrine/orm": "^2.11.0",
+    "doctrine/dbal": "^3.2",
+    "symfony/cache": "^5.4"
+  }
+}
