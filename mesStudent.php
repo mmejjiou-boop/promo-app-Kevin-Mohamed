@@ -1,11 +1,7 @@
 <?php
-
 require_once "bootstrap.php";
-require_once "vendor/autoload.php";
 
-use Symphonie\Modele\Student;
-
-$studentRepository = $entityManager->getRepository(Student::class);
+$studentRepository = $entityManager->getRepository("monProjet\Modele\Student");
 $students = $studentRepository->findAll();
 
 // Twig

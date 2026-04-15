@@ -1,6 +1,6 @@
 <?php
 
-namespace Symphonie\Modele;
+namespace monProjet\Modele;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -57,3 +57,5 @@ class Student
         $this->bio = $bio;
     }
 }
+
+
